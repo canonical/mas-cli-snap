@@ -1,0 +1,25 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "prBodyNotes": [
+        "---",
+		"### Pre-merge checks",
+        "- [ ] The Release Notes do not describe any breaking changes.",
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["(^|/)snapcraft.yaml$"],
+      "description": "Update Mas-cli",
+      "matchStringsStrategy": "any",
+      "matchStrings": [
+        "source-tag: v(?<currentValue>.+)",
+        "version: (?<currentValue>.+)"
+      ],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "element-hq/matrix-authentication-service",
+      "versioningTemplate": "semver-coerced"
+    }
+  ]
+}
