@@ -6,7 +6,7 @@
   "prBodyNotes": [
         "---",
 		"### Pre-merge checks",
-        "- [ ] The Release Notes do not describe any breaking changes.",
+        "- [ ] The Release Notes do not describe any breaking changes."
   ],
   "regexManagers": [
     {
