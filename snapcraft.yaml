@@ -4,7 +4,7 @@
 name: mas-cli
 summary: MAS CLI Tool
 description: MAS CLI is a command-line tool for managing MAS policies.
-version: 1.4.1
+version: 1.5.0
 base: core22
 license: Apache-2.0
 confinement: strict
@@ -21,7 +21,7 @@ parts:
       - "--no-default-features"
     source: https://github.com/element-hq/matrix-authentication-service
     source-type: git
-    source-tag: v1.4.1
+    source-tag: v1.5.0
     build-snaps:
       - go/1.22/stable
     override-build: |
