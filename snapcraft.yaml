@@ -4,7 +4,7 @@
 name: mas-cli
 summary: MAS CLI Tool
 description: MAS CLI is a command-line tool for managing MAS policies.
-version: 1.26.0
+version: 1.29.0
 base: core22
 license: Apache-2.0
 confinement: strict
@@ -21,12 +21,12 @@ parts:
       - "--no-default-features"
     source: https://github.com/element-hq/matrix-authentication-service
     source-type: git
-    source-tag: v1.26.0
+    source-tag: v1.29.0
     build-snaps:
-      - go/1.22/stable
+      - go/1.26/stable
     override-build: |
       # Build the open-policy-agent binary
-      git clone --depth 1 --branch v0.70.0 https://github.com/open-policy-agent/opa.git
+      git clone --depth 1 --branch v1.21.4 https://github.com/open-policy-agent/opa.git
       (cd opa; make build; chmod +x opa_linux_amd64; mv opa_linux_amd64 /usr/local/bin/opa)
       # Build MAS policies
       (cd policies; make)
